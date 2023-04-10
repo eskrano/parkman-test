@@ -2,6 +2,13 @@
 
 All details described in task.pdf.
 
+
+## endpoints examples
+- Get all garages - `http://localhost:8080/garages`
+- Get by country - `http://localhost:8080/garages/country/Finland`
+- Get by owner - `http://localhost:8080/garages/owner/{owner}`
+- Find by location `http://localhost:8080/garages/location/{lat},{lon}`
+
 ## Points to improve code
 
 - add eloquent model for garages in case if we need to create 
@@ -14,3 +21,5 @@ All details described in task.pdf.
 - add good CORS (now just copy-pasted from docs , sorry no time )
 
 Proposals??
+
+
