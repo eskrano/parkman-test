@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - '8080:80'
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+  php-fpm:
+    build: ./php-fpm
+    volumes:
+      - ./src:/var/www/html
+  mysql:
+      image: mysql:latest
+      ports:
+        - '3306:3306'
+      environment:
+        MYSQL_ROOT_PASSWORD: 'root' ## used root because it's an test task, so I decided not to waste time with users groups and privileges
+      volumes:
+        - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
