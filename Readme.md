@@ -19,6 +19,7 @@ All details described in task.pdf.
 - pagination ?
 - wrap up web/index.php into some static service & routes (make code looks more clear)
 - add good CORS (now just copy-pasted from docs , sorry no time )
+- add tables currencies/ owners / locations etc 
 
 Proposals??
 
